@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".voice_to_text">
+    <!--    <TextView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_above="@+id/speech"-->
+    <!--        android:padding="5dp"-->
+    <!--        android:textColor="#fff"-->
+    <!--        android:textSize="18dp"-->
+    <!--        android:layout_margin="5dp"-->
+    <!--        android:id="@+id/speech_text"/>-->
+
+    <EditText
+        android:id="@+id/speech_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linear_stt"
+        android:layout_margin="5dp"
+        android:background="@drawable/text_bg"
+        android:elevation="6dp"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical"
+        android:textColor="#000"
+        android:textCursorDrawable="@drawable/cursor"
+        android:textSize="18dp" />
+
+    <RelativeLayout
+        android:id="@+id/linear_stt"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/copy_stt"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/copy_stt" />
+
+        <ToggleButton
+            android:id="@+id/speech"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="2dp"
+            android:textSize="0dp"
+            android:text="@null"
+            android:textOff="@null"
+            android:textOn="@null"
+            android:elevation="3dp"
+            android:background="@drawable/btn_speech" />
+
+        <Button
+            android:id="@+id/share_stt"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/share_stt" />
+    </RelativeLayout>
+</RelativeLayout>
